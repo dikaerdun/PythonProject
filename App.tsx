@@ -88,7 +88,7 @@ const App: React.FC = () => {
       } catch (e) { loadDefaultPresets(); }
     } else { loadDefaultPresets(); }
     getMindfulnessTip().then(setTip);
-    generateLotusImage().then(image => { console.log('Lotus Image:', image); setLotusImage(image); });
+    generateLotusImage().then(setLotusImage);
     return () => stopSession();
   }, [stopSession]);
 
