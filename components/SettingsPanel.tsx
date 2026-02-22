@@ -44,9 +44,9 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({
           <div className="flex justify-between items-center px-1">
             <div className="flex items-center gap-2 text-cyan-400/60">
               <Clock size={14} />
-              <label className="text-[10px] font-serif italic tracking-widest">禅修时长</label>
+              <label className="text-[10px] font-serif italic tracking-widest">Session Duration</label>
             </div>
-            <span className="text-xl font-mono font-light text-white">{settings.sessionDuration}<span className="text-[10px] ml-1 opacity-30">分钟</span></span>
+            <span className="text-xl font-mono font-light text-white">{settings.sessionDuration}<span className="text-[10px] ml-1 opacity-30">min</span></span>
           </div>
           <input 
             type="range" min="1" max="60" step="1"
@@ -62,9 +62,9 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({
             <div className="flex justify-between items-center px-1">
               <div className="flex items-center gap-1.5 text-cyan-400/40">
                 <Wind size={12} className="rotate-180" />
-                <label className="text-[9px] font-serif italic tracking-wider">吸气</label>
+                <label className="text-[9px] font-serif italic tracking-wider">Inhale</label>
               </div>
-              <span className="text-sm font-mono font-light text-white">{settings.inhaleTime}秒</span>
+              <span className="text-sm font-mono font-light text-white">{settings.inhaleTime}s</span>
             </div>
             <input 
               type="range" min="2" max="15" step="0.5"
@@ -79,9 +79,9 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({
             <div className="flex justify-between items-center px-1">
               <div className="flex items-center gap-1.5 text-cyan-400/40">
                 <Wind size={12} />
-                <label className="text-[9px] font-serif italic tracking-wider">呼气</label>
+                <label className="text-[9px] font-serif italic tracking-wider">Exhale</label>
               </div>
-              <span className="text-sm font-mono font-light text-white">{settings.exhaleTime}秒</span>
+              <span className="text-sm font-mono font-light text-white">{settings.exhaleTime}s</span>
             </div>
             <input 
               type="range" min="2" max="15" step="0.5"
@@ -97,7 +97,7 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({
       <div className="pt-2 border-t border-white/5">
         <div className="flex items-center gap-2 mb-2 text-slate-600 px-1">
           <History size={12} />
-          <span className="text-[9px] font-serif italic tracking-widest">预设模式</span>
+          <span className="text-[9px] font-serif italic tracking-widest">Presets</span>
         </div>
         <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1">
           {presets.map(p => (
@@ -121,7 +121,7 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({
         <div className="relative flex-1">
           <input 
             type="text"
-            placeholder="保存当前配置为预设..."
+            placeholder="Save current as preset..."
             value={newPresetName}
             onChange={(e) => setNewPresetName(e.target.value)}
             className="w-full bg-slate-950/30 border border-slate-800/50 rounded-xl pl-3 pr-8 py-2 text-[10px] text-white font-serif italic focus:outline-none focus:border-cyan-500/30 transition-colors placeholder:text-slate-700"
@@ -133,7 +133,7 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({
           disabled={!newPresetName.trim()}
           className="bg-white/90 text-slate-950 px-4 py-2 rounded-xl text-[10px] font-serif font-bold hover:bg-white transition-colors active:scale-95 disabled:opacity-20 disabled:pointer-events-none"
         >
-          保存
+          Save
         </button>
       </div>
     </div>

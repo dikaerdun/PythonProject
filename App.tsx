@@ -376,7 +376,7 @@ const App: React.FC = () => {
               <Wind className="text-cyan-400/80 w-5 h-5" />
               <h1 className="text-3xl font-serif font-light tracking-[0.2em] text-white/90">禅息 · 4Hz</h1>
             </div>
-            <p className="text-[9px] text-slate-500 font-bold uppercase tracking-[0.6em] italic ml-2">纯净海洋音场</p>
+            <p className="text-[9px] text-slate-500 font-bold uppercase tracking-[0.6em] italic ml-2">Ocean-Pure Soundscape</p>
             
             <AnimatePresence mode="wait">
               {tip && (

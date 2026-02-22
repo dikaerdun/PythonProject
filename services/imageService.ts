@@ -23,6 +23,5 @@ export async function generateLotusImage() {
       return `data:image/png;base64,${part.inlineData.data}`;
     }
   }
-  // Fallback image in case of API failure
-  return 'https://picsum.photos/seed/lotus/500/500?blur=2';
+  return null;
 }
